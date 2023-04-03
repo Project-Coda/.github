@@ -1,35 +1,35 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "config:base"
-    ],
-    "commitMessagePrefix": "⬆️",
-    "dependencyDashboard": true,
-    "updatePinnedDependencies": true,
-    "packageRules": [
-        {
-          "matchDatasources": ["npm"],
-          "rangeStrategy": "bump"
-        },
-        {
-          "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "commitMessagePrefix": "⬆️",
+  "dependencyDashboard": true,
+  "updatePinnedDependencies": true,
+  "packageRules": [
+      {
+        "matchDepTypes": ["dependencies", "devDependencies"],
+        "rangeStrategy": "bump"
+      },
+      {
+        "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+        "automerge": true,
+        "platformAutomerge": true
+      },
+      {
+          "matchDepTypes": ["devDependencies"],
           "automerge": true,
           "platformAutomerge": true
-        },
-        {
-            "matchDepTypes": ["devDependencies"],
-            "automerge": true,
-            "platformAutomerge": true
-        },
-        {
-            "matchDatasources": ["github-tags"],
-            "automerge": true,
-            "platformAutomerge": true
-        },
-        {
-            "matchDepNames": ["node-fetch"],
-            "matchUpdateTypes": ["major"],
-            "enabled": false
-        }
-      ]
-  }
+      },
+      {
+          "matchDatasources": ["github-tags"],
+          "automerge": true,
+          "platformAutomerge": true
+      },
+      {
+          "matchDepNames": ["node-fetch"],
+          "matchUpdateTypes": ["major"],
+          "enabled": false
+      }
+    ]
+}
