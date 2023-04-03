@@ -6,6 +6,7 @@
   "commitMessagePrefix": "⬆️",
   "dependencyDashboard": true,
   "updatePinnedDependencies": true,
+  "prHourlyLimit": 10,
   "packageRules": [
       {
         "matchDepTypes": ["dependencies", "devDependencies"],
