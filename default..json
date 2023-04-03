@@ -25,11 +25,6 @@
           "matchDatasources": ["github-tags"],
           "automerge": true,
           "platformAutomerge": true
-      },
-      {
-          "matchDepNames": ["node-fetch"],
-          "matchUpdateTypes": ["major"],
-          "enabled": false
       }
     ]
 }
